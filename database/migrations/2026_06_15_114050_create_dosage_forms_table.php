@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('dosage_forms', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('form_name')->unique();
         });
     }
 
