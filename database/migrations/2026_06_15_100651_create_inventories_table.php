@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('item_code')->unique();
             $table->unsignedBigInteger('commodity_name_id');
-            $table->string('generic_name');
+            $table->string('generic_name'); 
             // medicine classification (Analgesic)
             $table->unsignedBigInteger('classification_id');
-            $table->unsignedBigInteger('dosage_strength_id');
+            $table->integer('dosage_strength_value');
+            $table->unsignedBigInteger('dosage_strength_unit_id');
             $table->unsignedBigInteger('dosage_form_id');
             $table->unsignedBigInteger('unit_id');
             $table->integer('quantity');

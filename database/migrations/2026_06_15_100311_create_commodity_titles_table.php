@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('commodity_titles', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('title')->unique();
+            $table->unsignedBigInteger('commodity_type_id');
         });
     }
 
