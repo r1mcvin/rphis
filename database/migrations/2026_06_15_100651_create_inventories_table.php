@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('inventories', function (Blueprint $table) {
             $table->id();
             $table->string('item_code')->unique();
-            $table->unsignedBigInteger('commodity_name_id');
+            $table->unsignedBigInteger('commodity_title_id');
             $table->string('generic_name'); 
             // medicine classification (Analgesic)
             $table->unsignedBigInteger('classification_id');
